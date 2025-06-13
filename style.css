@@ -79,7 +79,6 @@ main {
       max-height: fit-content;
 
     .grid-container {
-      max-width: 800px;
       margin: 0 auto;
       background: var(--clr-neutral-100);
       padding: 1rem;
@@ -101,7 +100,7 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: value(--clr-neutral-100);
+    background-color: var(--clr-neutral-100);
     padding: 3rem 1rem;
   }
 
@@ -118,20 +117,28 @@ main {
   input {
     padding: 0.5rem 1rem;
     border-radius: 20px;
-    border: 1px solid val(--clr-neutral-100);
+    border: 1px solid var(--clr-neutral-100);
     flex: 1;
     min-width: 200px;
   }
 
   .nyhetsbrev-icon {
-    width: 18rem;
-    height: 18rem;
-    background: val(--clr-green-400);
+    width: 16rem;
+    height: 16rem;
+    background-color: var(--clr-green-400);
     border-radius: 999rem;
     margin: auto;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
 
+}
+
+footer {
+  background-color: var(--clr-green-400);
 }
 
 /* reset from Kevin Powell edit if you like */
