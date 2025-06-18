@@ -25,19 +25,20 @@ header {
     }
   }
 
-  #logo {
+  .logo {
     max-height: 40px;
     max-width: 40px;
     margin-right: 0.5rem;
+    stroke: var(--clr-green-400);
   }
 
-  #brand {
+  .brand {
     display: inline-flex;
     align-items: center;
     text-decoration: none;
   }
 
-  #brand-name {
+  .brand-name {
     font-weight: bold;
     font-size: 0.9rem;
     line-height: 1.1;
@@ -73,10 +74,11 @@ main {
   .image-grid {
     background-color: var(--clr-neutral-100);
     padding: 0;
-    box-shadow: 0 4px 8px 0 var(--clr-neutral-900),
-      0 6px 20px 0 var(--clr-neutral-900);
-      max-width: fit-content;
-      max-height: fit-content;
+    margin-top: 2rem;
+    box-shadow: var(--border-shadow);
+    
+    max-width: fit-content;
+    max-height: fit-content;
 
     .grid-container {
       margin: 0 auto;
@@ -85,7 +87,8 @@ main {
       border: 1px solid var(--clr-neutral-100);
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 0.5rem;
+      gap: 0rem;
+      list-style: none;
 
       img {
         width: 100%;
@@ -95,34 +98,41 @@ main {
     }
   }
 
-  .nyhetsbrev {
+  .banner {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     background-color: var(--clr-neutral-100);
     padding: 3rem 1rem;
   }
 
-  .nyhetsbrev-content {
+  .banner h3 {
+    margin: 0.5rem;
+  }
+
+  .newsletter-content {
     font-size: 1.25rem;
     margin-bottom: 1rem;
   }
 
-  .nyhetsbrev form {
+  .banner form {
     display: flex;
     gap: 0.5rem;
+    border-radius: 20px;
+    border: 1px solid var(--clr-neutral-900);
   }
 
-  input {
+  .newsletter-input {
     padding: 0.5rem 1rem;
     border-radius: 20px;
-    border: 1px solid var(--clr-neutral-100);
     flex: 1;
     min-width: 200px;
+    background-color: var(--clr-neutral-100);
+    text-align: center;
   }
 
-  .nyhetsbrev-icon {
+  .banner-icon {
     width: 16rem;
     height: 16rem;
     background-color: var(--clr-green-400);
@@ -134,11 +144,74 @@ main {
     justify-content: center;
   }
 
+  .banner button {
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  background: var(--clr-green-400);
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+
 
 }
 
 footer {
   background-color: var(--clr-green-400);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem 2rem;
+
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-logo {
+    max-height: 40px;
+    max-width: 40px;
+    margin-right: 0.5rem;
+    stroke: var(--clr-neutral-100);
+  }
+
+  .footer-brand {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .footer-brand-name {
+    font-weight: bold;
+    font-size: 0.9rem;
+    line-height: 1.1;
+    color: var(--clr-neutral-100);
+  }
+
+  .footer-text {
+    color: var(--clr-neutral-100);
+  }
+
+  .footer-contact {
+    display: flex;
+    flex-direction: row;
+    color: var(--clr-neutral-100);
+  }
+
+  .footer-contact-icon {
+    padding-right: 0.2rem;
+  }
+
+  .footer-links {
+    list-style: none;
+
+    a {
+      color: var(--clr-neutral-100);
+      font-weight: bold;
+    }
+  }
+
 }
 
 /* reset from Kevin Powell edit if you like */
