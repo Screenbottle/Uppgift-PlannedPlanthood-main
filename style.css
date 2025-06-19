@@ -197,6 +197,11 @@ main {
     font-weight: bold;
   }
 
+  .banner .navigation-button {
+    margin-top: 1rem;
+    justify-self: flex-end;
+  }
+
   .banner-text {
     max-width: clamp(25vw, 30vw, 55vw);
   }
@@ -379,6 +384,8 @@ footer {
   }
 
   .footer-links {
+    display: flex;
+    flex-direction: column;
     list-style: none;
 
     li {
@@ -388,6 +395,23 @@ footer {
     a {
       color: var(--clr-neutral-100);
       font-weight: bold;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  footer {
+    flex-direction: column;
+
+    .footer-info {
+      justify-content: center;
+      justify-self: center;
+      align-self: center;
+    }
+
+    .footer-links {
+      flex-direction: row;
+      justify-content: space-evenly;
     }
   }
 }
